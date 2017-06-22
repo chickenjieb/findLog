@@ -115,6 +115,14 @@ function initPushwoosh() {
               console.warn('setTags failed');
           }
       );
+      pushNotification.getTags(
+          function(status) {
+              console.info('getTags success: ' + JSON.stringify(status));
+          },
+          function(status) {
+              console.warn('getTags failed');
+          }
+      );
   }
 // </script>
 
