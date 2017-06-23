@@ -126,7 +126,7 @@ function initPushwoosh() {
   function resetUserID(){
     var pushNotification = cordova.require("pushwoosh-cordova-plugin.PushNotification");
     var userID = document.getElementById('inputUserID').value;
-    window.alert(UserID);
+    window.alert(userID);
     pushNotification.setUserID(userID);
   }
 
