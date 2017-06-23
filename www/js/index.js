@@ -130,6 +130,30 @@ function initPushwoosh() {
     pushNotification.setUserId(userID);
   }
 
+  function pushMessage(){
+    var message = document.getElementById('inputMessage').value;
+    var receiver = document.getElementById('inputReceiver').value;
+    $.ajax({
+    type: "POST",
+    url: "https://cp.pushwoosh.com/json/1.3/createMessage",
+    data: JSON.stringify({
+        "request": {
+            "application": "6612A-7C4FC",
+            "auth": "51zRQTevegijOMtiNtPg20UEwIWHFXAYDGpdQYWNw9vq3DEI4Xr6EaTJ6hFN6vEG9e5F5RAcUKjIS9NCBqYi",
+            "notifications": [{
+                "send_date": "now",
+                "ignore_user_timezone": true,
+                "content": message,
+                "users":[receiver]
+            }]
+        }
+    }),
+    dataType: "json"
+    }).done(function(data) {
+        console.log(data);
+    });
+  }
+
 var app = {
     // Application Constructor
     initialize: function() {
