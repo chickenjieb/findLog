@@ -99,9 +99,7 @@ function initPushwoosh() {
 
 }
 
-// <script type="text/javascript">
   function resetUsername() {
-      // var pushNotification = cordova.require(“pushwoosh-cordova-plugin.PushNotification”);
       var pushNotification = cordova.require("pushwoosh-cordova-plugin.PushNotification");
       var username = document.getElementById('inputUsername').value;
       window.alert(username);
@@ -124,7 +122,13 @@ function initPushwoosh() {
           }
       );
   }
-// </script>
+
+  function setUserID(){
+    var pushNotification = cordova.require("pushwoosh-cordova-plugin.PushNotification");
+    var userID = document.getElementById('inputUserID').value;
+    window.alert(UserID);
+    pushNotification.setUserID(userID);
+  }
 
 var app = {
     // Application Constructor
