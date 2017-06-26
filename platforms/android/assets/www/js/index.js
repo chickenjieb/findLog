@@ -98,10 +98,8 @@ function initPushwoosh() {
     );
 
 }
-
-// <script type="text/javascript">
+  // reset tag value from tag name "username"
   function resetUsername() {
-      // var pushNotification = cordova.require(“pushwoosh-cordova-plugin.PushNotification”);
       var pushNotification = cordova.require("pushwoosh-cordova-plugin.PushNotification");
       var username = document.getElementById('inputUsername').value;
       window.alert(username);
@@ -124,7 +122,39 @@ function initPushwoosh() {
           }
       );
   }
-// </script>
+
+  // reset UserId value
+  function resetUserID(){
+    var pushNotification = cordova.require("pushwoosh-cordova-plugin.PushNotification");
+    var userID = document.getElementById('inputUserID').value;
+    window.alert(userID);
+    pushNotification.setUserId(userID);
+  }
+
+  // push message to specified receiver using UserID 
+  function pushMessage(){
+    var message = document.getElementById('inputMessage').value;
+    var receiver = document.getElementById('inputReceiver').value;
+    $.ajax({
+    type: "POST",
+    url: "https://cp.pushwoosh.com/json/1.3/createMessage",
+    data: JSON.stringify({
+        "request": {
+            "application": "6612A-7C4FC",
+            "auth": "51zRQTevegijOMtiNtPg20UEwIWHFXAYDGpdQYWNw9vq3DEI4Xr6EaTJ6hFN6vEG9e5F5RAcUKjIS9NCBqYi",
+            "notifications": [{
+                "send_date": "now",
+                "ignore_user_timezone": true,
+                "content": message,
+                "users":[receiver]
+            }]
+        }
+    }),
+    dataType: "json"
+    }).done(function(data) {
+        console.log(data);
+    });
+  }
 
 var app = {
     // Application Constructor

@@ -119,4 +119,5 @@
         <variable name="IOS_FOREGROUND_ALERT_TYPE" value="NONE" />
         <variable name="ANDROID_FOREGROUND_PUSH" value="false" />
     </plugin>
+    <plugin name="cordova-universal-links-plugin" spec="~1.2.1" />
 </widget>

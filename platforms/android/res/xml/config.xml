@@ -65,6 +65,10 @@
     <feature name="PushNotification">
         <param name="android-package" onload="true" value="com.pushwoosh.plugin.pushnotifications.PushNotifications" />
     </feature>
+    <feature name="UniversalLinks">
+        <param name="android-package" value="com.nordnetab.cordova.ul.UniversalLinksPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <name>helloworld</name>
     <description>
         Hello World sample application that responds to the deviceready event.

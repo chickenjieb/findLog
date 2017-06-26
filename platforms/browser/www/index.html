@@ -43,9 +43,16 @@
             </fieldset>
             <input id="inputUsername" placeholder="Username"/>
             <button id="btnUsername" onclick="resetUsername()">Reset username</button>
+            <br />
+            <input id="inputUserID" placeholder="UserID"/>
+            <button id="btnUserID" onclick="resetUserID()">Reset userID</button>
+            <br />
+            <input id="inputMessage" placeholder="Message"/><input id="inputReceiver" placeholder="Receiver"/>
+            <button id="btnMessage" onclick="pushMessage()">Push notifications</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript">
             app.initialize();
             // document.getElementById("btnUsername").addEventListener("click",resetUsername);

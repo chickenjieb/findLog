@@ -69,6 +69,9 @@
             "IOS_FOREGROUND_ALERT_TYPE": "NONE",
             "ANDROID_FOREGROUND_PUSH": "false",
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-universal-links-plugin": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {

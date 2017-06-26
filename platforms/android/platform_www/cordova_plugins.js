@@ -525,6 +525,14 @@ module.exports = [
         "clobbers": [
             "plugins.pushNotification"
         ]
+    },
+    {
+        "id": "cordova-universal-links-plugin.universalLinks",
+        "file": "plugins/cordova-universal-links-plugin/www/universal_links.js",
+        "pluginId": "cordova-universal-links-plugin",
+        "clobbers": [
+            "universalLinks"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -551,7 +559,8 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-vibration": "2.1.5",
     "cordova-plugin-whitelist": "1.2.2",
-    "pushwoosh-cordova-plugin": "6.5.3"
+    "pushwoosh-cordova-plugin": "6.5.3",
+    "cordova-universal-links-plugin": "1.2.1"
 };
 // BOTTOM OF METADATA
 });
