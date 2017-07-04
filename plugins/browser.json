@@ -72,6 +72,9 @@
         },
         "cordova-universal-links-plugin": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "branch-cordova-sdk": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {

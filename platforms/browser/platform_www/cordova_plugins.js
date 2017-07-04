@@ -618,6 +618,14 @@ module.exports = [
         "clobbers": [
             "universalLinks"
         ]
+    },
+    {
+        "file": "plugins/branch-cordova-sdk/src/branch.js",
+        "id": "branch-cordova-sdk.Branch",
+        "pluginId": "branch-cordova-sdk",
+        "clobbers": [
+            "Branch"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -645,7 +653,8 @@ module.exports.metadata =
     "cordova-plugin-vibration": "2.1.5",
     "cordova-plugin-whitelist": "1.2.2",
     "pushwoosh-cordova-plugin": "6.5.3",
-    "cordova-universal-links-plugin": "1.2.1"
+    "cordova-universal-links-plugin": "1.2.1",
+    "branch-cordova-sdk": "2.6.0"
 }
 // BOTTOM OF METADATA
 });

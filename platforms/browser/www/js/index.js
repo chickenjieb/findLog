@@ -81,7 +81,7 @@ function initPushwoosh() {
     //initialize Pushwoosh with projectid: "GOOGLE_PROJECT_ID", appid : "PUSHWOOSH_APP_ID". This will trigger all pending push notifications on start.
     pushNotification.onDeviceReady({
         projectid: "647864599214",
-        appid: "6612A-7C4FC",
+        appid: "24929-CDE68",
         serviceName: ""
     });
 
@@ -131,7 +131,7 @@ function initPushwoosh() {
     pushNotification.setUserId(userID);
   }
 
-  // push message to specified receiver using UserID 
+  // push message to specified receiver using UserID
   function pushMessage(){
     var message = document.getElementById('inputMessage').value;
     var receiver = document.getElementById('inputReceiver').value;
@@ -140,8 +140,8 @@ function initPushwoosh() {
     url: "https://cp.pushwoosh.com/json/1.3/createMessage",
     data: JSON.stringify({
         "request": {
-            "application": "6612A-7C4FC",
-            "auth": "51zRQTevegijOMtiNtPg20UEwIWHFXAYDGpdQYWNw9vq3DEI4Xr6EaTJ6hFN6vEG9e5F5RAcUKjIS9NCBqYi",
+            "application": "24929-CDE68",
+            "auth": "w4CR0pvi9NVjI2fhSX2rbOQe8rVOjIWDPth0IVi5WelprUPOl2eOPHw8qP5WMCfM5VI1oh6aDSF0oFO6Ts3V",
             "notifications": [{
                 "send_date": "now",
                 "ignore_user_timezone": true,
@@ -154,6 +154,13 @@ function initPushwoosh() {
     }).done(function(data) {
         console.log(data);
     });
+  }
+
+  document.addEventListener('eventName', didLaunchAppFromLink, false);
+  function didLaunchAppFromLink(event) {
+    var urlData = event.detail;
+    console.log('Did launch application from the link: ' + urlData.url);
+    // do some work
   }
 
 var app = {
@@ -173,18 +180,40 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+      console.log('Device is ready for work');
+      // universalLinks.subscribe('eventName', app.didLaunchAppFromLink);
+      // universalLinks.subscribe(null, function (eventData) {
+      //     // do some work
+      //     // in eventData you'll see url и and parsed url with schema, host, path and arguments
+      //     console.log('Did mya application from the link: ' + JSON.stringify(eventData));
+      //     alert('Did launch application from the link: ' + JSON.stringify(eventData));
+      // });
+        universalLinks.subscribe('example1', function (eventData) {
+          // do some work
+          // in eventData you'll see url и and parsed url with schema, host, path and arguments
+              console.log('Did launch application from the link: ' + JSON.stringify(eventData));
+              alert('test1: ' + JSON.stringify(eventData));
+          });
+          universalLinks.subscribe('example2', function (eventData) {
+              // do some work
+              // in eventData you'll see url и and parsed url with schema, host, path and arguments
+              console.log('Did launch application from the link: ' + JSON.stringify(eventData));
+              alert('test2: ' + JSON.stringify(eventData));
+          });
         initPushwoosh();
         app.receivedEvent('deviceready');
+    },
+    didLaunchAppFromLink: function(eventData) {
+      alert('Did launch application from the link: ' + eventData.url);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
-
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
         console.log('Received Event: ' + id);
     }
 };
+app.initialize();

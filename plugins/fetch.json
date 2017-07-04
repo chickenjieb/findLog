@@ -182,5 +182,16 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "branch-cordova-sdk": {
+        "source": {
+            "type": "registry",
+            "id": "branch-cordova-sdk"
+        },
+        "is_top_level": true,
+        "variables": {
+            "BRANCH_KEY": "key_live_dmvyTV2kIIVAFSV7qBZbHajfwwmJX8k4",
+            "URI_SCHEME": "pwdl"
+        }
     }
 }

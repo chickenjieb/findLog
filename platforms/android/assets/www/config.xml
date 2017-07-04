@@ -16,6 +16,15 @@
         Pushwoosh
     </author>
 
+    <!-- sample config.xml -->
+<!-- <widget id="pwdl.app.link" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <branch-config>
+    <ios-team-id value="pwdl.app.link"/>
+    <host name="pwdl.app.link.app.link" scheme="https" />
+    <host name="pwdl.app.link-alternate.app.link" scheme="https" />
+  </branch-config>
+  <preference name="AndroidLaunchMode" value="singleInstance" /> -->
+
     <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"           value="cli-6.3.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->

@@ -1,0 +1,89 @@
+{
+  "_from": "branch-cordova-sdk",
+  "_id": "branch-cordova-sdk@2.6.0",
+  "_inBundle": false,
+  "_integrity": "sha1-GrFt0ALfiYotcqpH5UBhbclyDCE=",
+  "_location": "/branch-cordova-sdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "branch-cordova-sdk",
+    "name": "branch-cordova-sdk",
+    "escapedName": "branch-cordova-sdk",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/branch-cordova-sdk/-/branch-cordova-sdk-2.6.0.tgz",
+  "_shasum": "1ab16dd002df898a2d72aa47e540616dc9720c21",
+  "_spec": "branch-cordova-sdk",
+  "_where": "C:\\Users\\User\\Desktop\\findLog\\node_modules",
+  "bugs": {
+    "url": "https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking/issues"
+  },
+  "bundleDependencies": false,
+  "config": {
+    "validate-commit-msg": {
+      "types": "conventional-commit-types"
+    }
+  },
+  "dependencies": {
+    "mkpath": "^1.0.0",
+    "node-version-compare": "^1.0.1",
+    "plist": "^2.0.1",
+    "xml2js": "^0.4.17"
+  },
+  "deprecated": false,
+  "description": "Branch Metrics Cordova SDK",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-standard": "^9.0.0",
+    "husky": "^0.13.2",
+    "mkpath": "^1.0.0",
+    "node-version-compare": "^1.0.1",
+    "plist": "^2.1.0",
+    "semantic-release": "^6.3.6",
+    "validate-commit-msg": "^2.11.2",
+    "xml2js": "^0.4.17"
+  },
+  "homepage": "https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking",
+  "keywords": [
+    "ecosystem:cordova",
+    "ecosystem:phonegap",
+    "ecosystem:ionic",
+    "cordova-ios",
+    "cordova-android",
+    "branch",
+    "linking",
+    "deep links",
+    "deep linking",
+    "universal links",
+    "app links",
+    "deferred deep linking"
+  ],
+  "license": "MIT",
+  "main": "www/branch.js",
+  "name": "branch-cordova-sdk",
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking.git"
+  },
+  "scripts": {
+    "changelog": "node ./src/scripts/npm/updateChangeLog -reset=true",
+    "commitmsg": "validate-commit-msg",
+    "postcommit": "semantic-release pre --verifyRelease='./src/scripts/npm/updateNpmVersion' || true",
+    "precommit": "gulp prod",
+    "prerelease": "gulp prod",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "version": "2.6.0"
+}

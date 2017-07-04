@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta name="branch:deeplink:deeplink_path" content="test" />
+  </head>
+  <body>
+    <h1>Hellooooo custom url</h1>
+    <a href="pwdl://index">link</a>
+    <div>
+   <fieldset>
+     <legend>Branch Universal Object</legend>
+     <div>
+       <button onclick="BranchUniversalObject()">Create</button>
+     </div>
+   </fieldset>
+ </div>
+  <div>
+  <fieldset>
+    <legend>Branch Deep Link</legend>
+    <div>
+      <input id="alias" name="alias" type="text" placeholder="Enter an alias">
+    </div>
+    <div>
+      <button onclick="BranchDeepLink()">Create</button>
+      <button onclick="BranchShareSheet()">Share</button>
+    </div>
+    <div>
+      <input type="text" id="generated-url" placeholder="Deep Link" readonly>
+    </div>
+  </fieldset>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
