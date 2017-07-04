@@ -33,7 +33,6 @@
                 "IOS_FOREGROUND_ALERT_TYPE": "NONE",
                 "ANDROID_FOREGROUND_PUSH": "false"
             },
-            "LaunchMyApp": {},
             "branch-cordova-sdk": {
                 "BRANCH_KEY": "key_live_dmvyTV2kIIVAFSV7qBZbHajfwwmJX8k4",
                 "URI_SCHEME": "pwdl"

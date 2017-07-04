@@ -105,7 +105,7 @@
     </branch-config> -->
     <preference name="AndroidLaunchMode" value="singleInstance" />
     <engine name="android" spec="^6.2.3" />
-    <plugin name="LaunchMyApp" />
+    <!-- <plugin name="LaunchMyApp" /> -->
     <!-- <plugin name="branch-cordova-sdk" spec="^2.6.0">
         <variable name="BRANCH_KEY" value="key_live_dmvyTV2kIIVAFSV7qBZbHajfwwmJX8k4" />
         <variable name="URI_SCHEME" value="pwdl" />
